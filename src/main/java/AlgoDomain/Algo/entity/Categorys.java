@@ -8,7 +8,7 @@ public class Categorys  {
 	private int productId;
     private String name;
     private String productType;
-    private Category category;
+    private String category;
     private double basePrice;
     private double discount;
     private Charges charges;
@@ -17,7 +17,7 @@ public class Categorys  {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Categorys(int productId, String name, String productType, Category category, double basePrice,
+	public Categorys(int productId, String name, String productType, String category, double basePrice,
 			double discount, Charges charges, double finalPrice) {
 		super();
 		this.productId = productId;
@@ -47,10 +47,10 @@ public class Categorys  {
 	public void setProductType(String productType) {
 		this.productType = productType;
 	}
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 	public double getBasePrice() {

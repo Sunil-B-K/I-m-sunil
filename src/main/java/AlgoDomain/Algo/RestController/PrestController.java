@@ -23,26 +23,7 @@ import AlgoDomain.Algo.entity.Categorys;
 @RestController
 @RequestMapping("/api1")
 public class PrestController {
-	 /*private final Map<String, Double> categoryDiscounts = new HashMap<>();
-	    private final Map<String, Double> categoryGST = new HashMap<>();
-	    private final Map<String, Double> categoryDeliveryCharges = new HashMap<>();
-	    public void ProductController() {
-	        // initialize discount, GST, and delivery charges for each category
-	        categoryDiscounts.put("Electronics", 0.15);
-	        categoryDiscounts.put("Home Appliances", 0.22);
-	        categoryDiscounts.put("Clothing", 0.40);
-	        categoryDiscounts.put("Furniture", 0.10);
-
-	        categoryGST.put("Electronics", 0.18);
-	        categoryGST.put("Home Appliances", 0.24);
-	        categoryGST.put("Clothing", 0.12);
-	        categoryGST.put("Furniture", 0.18);
-
-	        categoryDeliveryCharges.put("Electronics", 350.0);
-	        categoryDeliveryCharges.put("Home Appliances", 800.0);*/
-	       // categoryDeliveryCharges.put("Clothing", 0.0);
-	       // categoryDeliveryCharges.put("Furniture", 300.0);
-	    //}
+	 
 	Product pd;
      @Autowired
 	public PrestController(Product pd) {
@@ -58,8 +39,8 @@ public class PrestController {
 
      
      @GetMapping(value="/one/{productid}")
-     public Categorys getOneData(@PathVariable int productid) {
-    	 return pd.getOneData(productid);
+     public Categorys getProducts(@PathVariable int productid) {
+    	 return pd.getProducts(productid);
 			  
      }
      

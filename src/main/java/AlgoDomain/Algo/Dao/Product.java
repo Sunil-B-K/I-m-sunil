@@ -7,7 +7,7 @@ import AlgoDomain.Algo.entity.Categorys;
 
 public interface Product {
 	List<Aproduct>getProduct();
-	Categorys getOneData(int productid);
+	Categorys getProducts(int productid);
 	void delproduct(int productid);
 	void insert(Aproduct aproduct);
 	void update(Aproduct aproduct);
