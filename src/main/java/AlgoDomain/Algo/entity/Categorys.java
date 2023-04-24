@@ -83,6 +83,8 @@ public class Categorys  {
 				+ category + ", basePrice=" + basePrice + ", discount=" + discount + ", charges=" + charges
 				+ ", finalPrice=" + finalPrice + "]";
 	}
+
+
 	
 	
 	

@@ -13,6 +13,7 @@ public interface Product {
 	void update(Aproduct aproduct);
 	//static void setDiscount(double discount) 
 		// TODO Auto-generated method stub
+	//Categorys calculatePrice(Categorys product);
 	
 	
 		

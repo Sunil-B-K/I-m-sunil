@@ -61,6 +61,14 @@ public class PrestController {
      public void update( @RequestBody Aproduct aproduct) {
     	 pd.update(aproduct);
      }
-    	 
+     
+		/*
+		 * @GetMapping(value="/one/{product}") public Categorys
+		 * getProductsy(@RequestBody Categorys product) { return pd.
+		 * calculatePrice(product);
+		 * 
+		 * }
+		 */
+      
     	     
 }
