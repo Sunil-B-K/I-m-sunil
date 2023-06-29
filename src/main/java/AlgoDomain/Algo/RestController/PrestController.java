@@ -20,6 +20,7 @@ import AlgoDomain.Algo.Dao.productImp;
 import AlgoDomain.Algo.entity.Aproduct;
 import AlgoDomain.Algo.entity.Category;
 import AlgoDomain.Algo.entity.Categorys;
+import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/api1")
 public class PrestController {
@@ -30,6 +31,7 @@ public class PrestController {
 		super();
 		this.pd = pd;
 	}
+     @ApiOperation(value = "/map")
      @GetMapping(value="/map")
      public List<Aproduct> getProduct(){ 
 		return pd.getProduct();
@@ -37,25 +39,28 @@ public class PrestController {
      }
      
 
-     
+     @ApiOperation(value = "/one/{@ApiParam}")
      @GetMapping(value="/one/{productid}")
      public Categorys getProducts(@PathVariable int productid) {
     	 return pd.getProducts(productid);
 			  
      }
      
+     @ApiOperation(value = "/del/{@ApiParam}")
      @Transactional
      @GetMapping(value="/del/{productid}")
  	public void delproduct(@PathVariable int productid) {
  		pd.delproduct(productid);
  	}
      
+     @ApiOperation("/Aproducts")
      @Transactional
      @GetMapping("/Aproducts")
      public void insert(@RequestBody Aproduct aproduct) {
     	 pd.insert(aproduct);
      }
      
+     @ApiOperation("/update")
      @Transactional
      @PutMapping("/update")
      public void update( @RequestBody Aproduct aproduct) {
